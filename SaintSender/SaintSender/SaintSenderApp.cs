@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SaintSender
 {
-    public partial class EmailClient : Form
+    public partial class SaintSenderApp : Form
     {
-        public EmailClient()
+        public SaintSenderApp()
         {
             InitializeComponent();
         }

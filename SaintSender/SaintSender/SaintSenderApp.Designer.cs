@@ -1,6 +1,6 @@
 ﻿namespace SaintSender
 {
-    partial class EmailClient
+    partial class SaintSenderApp
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // EmailClient
+            // SaintSenderApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "EmailClient";
+            this.ClientSize = new System.Drawing.Size(654, 509);
+            this.Name = "SaintSenderApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saint Sender";
             this.ResumeLayout(false);
 
@@ -44,4 +45,3 @@
         #endregion
     }
 }
-

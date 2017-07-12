@@ -16,7 +16,7 @@ namespace SaintSender
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmailClient());
+            Application.Run(new LoginPage());
         }
     }
 }
