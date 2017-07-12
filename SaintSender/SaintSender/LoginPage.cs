@@ -33,8 +33,8 @@ namespace SaintSender
                 {
                     MessageBox.Show("Logged In");
                     Hide();
-                    SaintSenderApp senderApp = new SaintSenderApp();
-                    senderApp.Show();
+                    EmailClient emailClient = new EmailClient();
+                    emailClient.Show();
                 }
                 else
                 {

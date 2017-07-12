@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace SaintSender
 {
-    public partial class SaintSenderApp : Form
+    public partial class EmailContent : Form
     {
-        public SaintSenderApp()
+        public EmailContent(string text)
         {
             InitializeComponent();
+            emailTextBox.Text = text;
         }
     }
 }

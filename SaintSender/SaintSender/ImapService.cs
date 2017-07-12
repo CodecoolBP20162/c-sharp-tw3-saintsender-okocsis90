@@ -12,8 +12,10 @@ namespace SaintSender
 {
     class ImapService
     {
+        public static string userName;
+        public static string passWord;
         private static ImapClient client { get; set; }
-
+        
         public static void Initialize()
         {
             client = new ImapClient("imap.gmail.com", true);
@@ -26,6 +28,8 @@ namespace SaintSender
 
         public static bool Login(string u, string p)
         {
+            userName = u;
+            passWord = p;
             return client.Login(u, p);
         }
 

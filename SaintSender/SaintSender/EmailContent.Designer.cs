@@ -1,6 +1,6 @@
 ﻿namespace SaintSender
 {
-    partial class SaintSenderApp
+    partial class EmailContent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.emailTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // SaintSenderApp
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(13, 13);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(474, 465);
+            this.emailTextBox.TabIndex = 0;
+            this.emailTextBox.Text = "";
+            // 
+            // EmailContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 509);
-            this.Name = "SaintSenderApp";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Saint Sender";
+            this.ClientSize = new System.Drawing.Size(499, 490);
+            this.Controls.Add(this.emailTextBox);
+            this.Name = "EmailContent";
+            this.Text = "Email Content";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox emailTextBox;
     }
 }
