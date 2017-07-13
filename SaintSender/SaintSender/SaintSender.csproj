@@ -48,43 +48,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmailClient.cs">
+    <Compile Include="Forms\EmailClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmailClient.Designer.cs">
+    <Compile Include="Forms\EmailClient.Designer.cs">
       <DependentUpon>EmailClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmailContent.cs">
+    <Compile Include="Forms\EmailContent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmailContent.Designer.cs">
+    <Compile Include="Forms\EmailContent.Designer.cs">
       <DependentUpon>EmailContent.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Services\EmailSenderService.cs" />
+    <Compile Include="Forms\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Forms\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImapService.cs" />
-    <Compile Include="NewEmailCreator.cs">
+    <Compile Include="Services\ImapService.cs" />
+    <Compile Include="Forms\NewEmailCreator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewEmailCreator.Designer.cs">
+    <Compile Include="Forms\NewEmailCreator.Designer.cs">
       <DependentUpon>NewEmailCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewEmailCreatorHelper.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EmailClient.resx">
+    <Compile Include="Models\User.cs" />
+    <EmbeddedResource Include="Forms\EmailClient.resx">
       <DependentUpon>EmailClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmailContent.resx">
+    <EmbeddedResource Include="Forms\EmailContent.resx">
       <DependentUpon>EmailContent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Forms\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewEmailCreator.resx">
+    <EmbeddedResource Include="Forms\NewEmailCreator.resx">
       <DependentUpon>NewEmailCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
