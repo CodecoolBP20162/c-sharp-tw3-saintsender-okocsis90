@@ -29,6 +29,7 @@ namespace SaintSender
         public static bool Login(string u, string p)
         {
             user = new User(u, p);
+            user.Serialize();
             return client.Login(u, p);
         }
 

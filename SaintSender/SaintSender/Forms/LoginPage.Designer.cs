@@ -46,6 +46,7 @@
             // 
             this.passBox.Location = new System.Drawing.Point(57, 113);
             this.passBox.Name = "passBox";
+            this.passBox.PasswordChar = '*';
             this.passBox.Size = new System.Drawing.Size(289, 20);
             this.passBox.TabIndex = 1;
             // 
@@ -90,6 +91,7 @@
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saint Sender";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
