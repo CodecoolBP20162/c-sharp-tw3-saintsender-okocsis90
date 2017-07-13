@@ -19,6 +19,12 @@ namespace SaintSender
             InitializeComponent();
         }
 
+        public NewEmailCreator(string senderEmail)
+        {
+            InitializeComponent();
+            toBox.Text = senderEmail;
+        }
+
         private void sendMailBtn_Click(object sender, EventArgs e)
         {
             EmailSenderService.SendEmail(toBox.Text, subjectBox.Text, emailContentBox.Text);

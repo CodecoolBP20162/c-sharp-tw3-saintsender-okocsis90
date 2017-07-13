@@ -12,10 +12,19 @@ namespace SaintSender
 {
     public partial class EmailContent : Form
     {
-        public EmailContent(string text)
+        public string SenderEmail { get; set; }
+
+        public EmailContent(string text, string senderEmail)
         {
             InitializeComponent();
             emailTextBox.Text = text;
+            SenderEmail = senderEmail;
+        }
+
+        private void responseBtn_Click(object sender, EventArgs e)
+        {
+            NewEmailCreator creator = new NewEmailCreator(SenderEmail);
+            creator.Show();
         }
     }
 }

@@ -40,7 +40,8 @@ namespace SaintSender
         private void emailDetailsListView_ItemActivate(object sender, EventArgs e)
         {
             string content = ImapService.GetEmailContent(emailDetailsListView.SelectedItems[0].Name);
-            EmailContent contentRepr = new EmailContent(content);
+            string senderEmail = emailDetailsListView.SelectedItems[0].SubItems[1].Text;
+            EmailContent contentRepr = new EmailContent(content, senderEmail);
             contentRepr.Show();
         }
 
