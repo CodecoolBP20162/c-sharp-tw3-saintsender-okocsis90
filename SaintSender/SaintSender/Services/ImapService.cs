@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
@@ -97,8 +98,17 @@ namespace SaintSender
 
         public static MessageCollection GetMessagesForFolder(string name)
         {
-            client.Folders[name].Messages.Download();
+
+            ParameterizedThreadStart threadStart = new ParameterizedThreadStart(DownloadMessages);
+            Thread searcherThread = new Thread(threadStart);
+            searcherThread.Start(name);
+            searcherThread.Join();
             return client.Folders[name].Messages;
+        }
+
+        public static void DownloadMessages(object name)
+        {
+            client.Folders[name.ToString()].Messages.Download();
         }
     }
 }

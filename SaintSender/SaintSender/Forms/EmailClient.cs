@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImapX;
@@ -31,8 +32,11 @@ namespace SaintSender
         private void folderListView_ItemActivate(object sender, EventArgs e)
         {
             emailDetailsListView.Items.Clear();
-            List<ListViewItem> messages = ImapService.LoadListViewItemsOfMessages(folderListView.SelectedItems[0].Text);
-            foreach (ListViewItem item in messages)
+            string name = folderListView.SelectedItems[0].Text;
+
+            List<ListViewItem> listViewItems = ImapService.LoadListViewItemsOfMessages(name);
+
+            foreach (ListViewItem item in listViewItems)
             {
                 emailDetailsListView.Items.Add(item);
             }
