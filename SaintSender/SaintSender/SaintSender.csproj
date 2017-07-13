@@ -60,6 +60,7 @@
     <Compile Include="Forms\EmailContent.Designer.cs">
       <DependentUpon>EmailContent.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTMLToText.cs" />
     <Compile Include="PathGetter.cs" />
     <Compile Include="Services\EmailSenderService.cs" />
     <Compile Include="Forms\LoginPage.cs">

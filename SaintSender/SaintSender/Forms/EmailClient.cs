@@ -30,6 +30,7 @@ namespace SaintSender
 
         private void folderListView_ItemActivate(object sender, EventArgs e)
         {
+            emailDetailsListView.Items.Clear();
             List<ListViewItem> messages = ImapService.LoadListViewItemsOfMessages(folderListView.SelectedItems[0].Text);
             foreach (ListViewItem item in messages)
             {

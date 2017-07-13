@@ -17,7 +17,7 @@ namespace SaintSender
         public EmailContent(string text, string senderEmail)
         {
             InitializeComponent();
-            emailTextBox.Text = text;
+            emailTextBox.Text = HTMLToText.StripHTML(text);
             SenderEmail = senderEmail;
         }
 
